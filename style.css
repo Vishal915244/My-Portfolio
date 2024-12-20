@@ -1,0 +1,214 @@
+/* Reset some default styling */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* General body styling */
+body {
+    /* background-image: url('https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg'); */
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    line-height: 1.6;
+    font-size: 18px;
+    /* background-color: #f4f4f4; */
+    color: #333;
+}
+
+/* Navigation bar styling */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+nav .logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Hero Section */
+#home {
+    background: url('https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 70px; /* Space for fixed navbar */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.intro {
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 50px;
+}
+
+.intro p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+/* About Section */
+#about, #portfolio, #contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Portfolio Section */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery .item {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    flex-basis: 30%;
+    border-radius: 5px;
+}
+
+.gallery .item:hover {
+    background-color: #555;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #4e4646;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        display: none;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    nav ul li:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    nav .logo {
+        font-size: 20px;
+    }
+
+    .gallery .item {
+        flex-basis: 100%;
+    }
+
+    .intro h1 {
+        font-size: 30px;
+    }
+
+    .intro p {
+        font-size: 18px;
+    }
+}
